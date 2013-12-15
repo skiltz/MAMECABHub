@@ -562,7 +562,7 @@ endif
 ifneq ($(TARGETOS),emscripten)
 INCPATH += `pkg-config --cflags fontconfig`
 endif
-+= `pkg-config --libs fontconfig`
+LIBS += `pkg-config --libs fontconfig`
 
 ifeq ($(SDL_LIBVER),sdl2)
 #LIBS += -lSDL2_ttf -lutil
